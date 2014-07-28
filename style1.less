@@ -1,3 +1,105 @@
+/*
+  img {
+    transition: width 800ms ease;
+    -moz-transition: width 800ms ease;
+    -webkit-transition: width 800ms ease;
+    &:hover {
+      width: 500px;
+      transition: width 800ms ease;
+      -moz-transition: width 800ms ease;
+      -webkit-transition: width 800ms ease;
+    }
+  }
+  */
+*{margin: 0;padding: 0; outline: 0; border: 0;}
 .fade {
-  background-color: red;
+  img {
+    display: block;
+  }
+
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  //margin-bottom: 5px;
+  &:hover {
+    .wrap-fade {
+      opacity: 1;
+      visibility: visible;
+      .fade-animation {
+        visibility: visible;
+      }
+      .fade-from-left {
+        left: 0px;
+      }
+      .fade-from-right {
+        right: 0px;
+      }
+    }
+    .fade-overlay {
+      background: #74c9be;
+      opacity: 0.6;
+      visibility: visible;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      text-align: center;
+      color: #ffffff;
+    }
+
+  }
+
+  img {
+
+  }
+  .wrap-fade {
+    transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -ms-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    -webkit-transition: all 0.6s ease;
+    overflow: hidden;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: #ffffff;
+    visibility: hidden;
+
+    z-index: 1;
+    .fade-animation {
+      transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -ms-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      -webkit-transition: all 0.5s;
+      visibility: hidden;
+    }
+    .fade-from-left {
+      position: relative;
+      left: -100%;
+    }
+    .fade-from-right {
+      position: relative;
+      right: -100%;
+    }
+  }
+
+  .fade-overlay {
+    transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -ms-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    -webkit-transition: all 0.6s ease;
+    overflow: hidden;
+    opacity: 0;
+  }
+
 }
+
+
+

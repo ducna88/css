@@ -2,18 +2,36 @@
 <html>
 <head>
     <title>Demo 1 css hover animate</title>
-    <link href="style1.css">
+    <link rel="stylesheet" type="text/css"  href="style1.css">
 </head>
 <body>
 <div>
     <h3>Fade</h3>
-    <div class="fade">
+    <div class="fade" >
         <img src="images/img1-300x198.jpg" width="300px">
-        <div class="wrap">
-            <h2>Title 1 Fade</h2>
-            <p>Every content change in here</p>
+        <div class="wrap-fade">
+            <h2 class="fade-animation fade-from-left">Title 1 Fade</h2>
+            <p class="fade-animation fade-from-right">Every content change in here</p>
         </div>
+        <div class="fade-overlay"></div>
+    </div>
 
+    <div class="fade" >
+        <img src="images/img2-300x198.jpg" width="300px">
+        <div class="wrap-fade">
+            <h2 class="fade-animation fade-from-left">Title 2 Fade</h2>
+            <p class="fade-animation fade-from-right">Every content change in here</p>
+        </div>
+        <div class="fade-overlay"></div>
+    </div>
+
+    <div class="fade">
+        <img src="images/img3-300x198.jpg" width="300px">
+        <div class="wrap-fade">
+            <h2 class="fade-animation fade-from-left">Title 3 Fade</h2>
+            <p class="fade-animation fade-from-right">Every content change in here</p>
+        </div>
+        <div class="fade-overlay"></div>
     </div>
 </div>
 </body>
