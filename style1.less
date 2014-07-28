@@ -12,6 +12,9 @@
   }
   */
 *{margin: 0;padding: 0; outline: 0; border: 0;}
+/*
+* Fade
+*/
 .fade {
   img {
     display: block;
@@ -101,5 +104,87 @@
 
 }
 
+/*
+* stroke
+*/
+.stroke {
+  img {
+    display: block;
+    //float: left;
+  }
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  text-decoration: none;
+  &:hover {
+    .wrap-stroke {
+      opacity: 1;
 
+      .stroke-from-right {
+        right: 0;
+      }
+      .stroke-from-left {
+        left: 0;
+      }
+      .stroke-animation {
+        visibility: visible;
+      }
 
+    }
+    .stroke-overlay-top {
+      top: 0px;
+    }
+    .stroke-overlay-bottom {
+      bottom: 0px;
+    }
+
+  }
+  .stroke-overlay-top {
+    width: 50%;
+    height: 100%;
+    top: -100%;
+    position: absolute;
+    left: 0;
+    background-color: black;
+    opacity: 0.8
+
+  }
+  .stroke-overlay-bottom {
+    width: 50%;
+    height: 100%;
+    bottom: -100%;
+    position: absolute;
+    right: 0;
+    background-color: black;
+    opacity: 0.8;
+  }
+
+  .wrap-stroke {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: #ffffff;
+    .stroke-from-right {
+      position: relative;
+      right: -100%;
+    }
+    .stroke-from-left {
+      position: relative;
+      left: -100%;
+    }
+    .stroke-animation {
+      visibility: hidden;
+      -webkit-transition: all 500ms;
+      -moz-transition: all 500ms;
+      -ms-transition: all 500ms;
+      -o-transition: all 500ms;
+      transition: all 500ms;
+    }
+  }
+
+}

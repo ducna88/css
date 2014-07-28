@@ -17,6 +17,9 @@
   outline: 0;
   border: 0;
 }
+/*
+* Fade
+*/
 .fade {
   position: relative;
   display: inline-block;
@@ -92,4 +95,79 @@
   -webkit-transition: all 0.6s ease;
   overflow: hidden;
   opacity: 0;
+}
+/*
+* stroke
+*/
+.stroke {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  text-decoration: none;
+}
+.stroke img {
+  display: block;
+}
+.stroke:hover .wrap-stroke {
+  opacity: 1;
+}
+.stroke:hover .wrap-stroke .stroke-from-right {
+  right: 0;
+}
+.stroke:hover .wrap-stroke .stroke-from-left {
+  left: 0;
+}
+.stroke:hover .wrap-stroke .stroke-animation {
+  visibility: visible;
+}
+.stroke:hover .stroke-overlay-top {
+  top: 0px;
+}
+.stroke:hover .stroke-overlay-bottom {
+  bottom: 0px;
+}
+.stroke .stroke-overlay-top {
+  width: 50%;
+  height: 100%;
+  top: -100%;
+  position: absolute;
+  left: 0;
+  background-color: black;
+  opacity: 0.8;
+}
+.stroke .stroke-overlay-bottom {
+  width: 50%;
+  height: 100%;
+  bottom: -100%;
+  position: absolute;
+  right: 0;
+  background-color: black;
+  opacity: 0.8;
+}
+.stroke .wrap-stroke {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  color: #ffffff;
+}
+.stroke .wrap-stroke .stroke-from-right {
+  position: relative;
+  right: -100%;
+}
+.stroke .wrap-stroke .stroke-from-left {
+  position: relative;
+  left: -100%;
+}
+.stroke .wrap-stroke .stroke-animation {
+  visibility: hidden;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms;
 }
