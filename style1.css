@@ -156,6 +156,12 @@
   opacity: 0.8;
 }
 .stroke .wrap-stroke {
+  transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  -webkit-transition: all 0.6s ease;
+  overflow: hidden;
   opacity: 0;
   width: 100%;
   height: 100%;
@@ -193,15 +199,21 @@
 }
 .twist img {
   display: block;
+  visibility: hidden;
 }
 .twist .wrap-twist {
+  transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  -webkit-transition: all 0.6s ease;
+  overflow: hidden;
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   text-align: center;
-  overflow: hidden;
   color: #ffffff;
   opacity: 0;
 }
@@ -223,13 +235,50 @@
 }
 .twist .twist-overlay-bottom,
 .twist .twist-overlay-top {
-  transition: all 0.6s ease;
-  -moz-transition: all 0.6s ease;
-  -ms-transition: all 0.6s ease;
-  -o-transition: all 0.6s ease;
-  -webkit-transition: all 0.6s ease;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
   overflow: hidden;
   opacity: 0;
+}
+.twist .twist-overlay-bottom b,
+.twist .twist-overlay-top b {
+  background: black;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transition: all 300ms 200ms;
+  -moz-transition: all 300ms 200ms;
+  -ms-transition: all 300ms 200ms;
+  -o-transition: all 300ms 200ms;
+  transition: all 300ms 200ms;
+}
+.twist .twist-overlay-bottom {
+  background-position: right top;
+  background: url("images/img1-300x198.jpg");
+  right: 0px;
+  -webkit-transform: perspective(400px) rotate3(180, 0, 0, 0);
+  -moz-transform: perspective(400px) rotate3(180, 0, 0, 0deg);
+  -ms-transform: perspective(400px) rotate3(180, 0, 0, 0deg);
+  -o-transform: perspective(400px) rotate3(180, 0, 0, 0deg);
+  transform: perspective(400px) rotate3(180, 0, 0, 0deg);
+}
+.twist .twist-overlay-top {
+  left: 0px;
+  background-position: left top;
+  background: url("images/img1-300x198.jpg");
+  -webkit-transform: perspective(400px) rotate3(180, 0, 0, 0);
+  -moz-transform: perspective(400px) rotate3(180, 0, 0, 0deg);
+  -ms-transform: perspective(400px) rotate3(180, 0, 0, 0deg);
+  -o-transform: perspective(400px) rotate3(180, 0, 0, 0deg);
+  transform: perspective(400px) rotate3(180, 0, 0, 0deg);
 }
 .twist:hover .wrap-twist {
   opacity: 1;
@@ -243,3 +292,15 @@
 .twist:hover .wrap-twist .twist-from-right {
   right: 0;
 }
+.twist:hover .twist-overlay-bottom,
+.twist:hover .twist-overlay-top {
+  opacity: 0.6;
+  -webkit-transform: perspective(400px) rotate3(180, 0, 0, 0);
+  -moz-transform: perspective(400px) rotate3(180, 0, 0, 0deg);
+  -ms-transform: perspective(400px) rotate3(180, 0, 0, 0deg);
+  -o-transform: perspective(400px) rotate3(180, 0, 0, 0deg);
+  transform: perspective(400px) rotate3(180, 0, 0, 0deg);
+}
+/*
+** Twist vs 2
+*/
